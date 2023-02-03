@@ -42,7 +42,7 @@ const Cards = () => {
               <Card
                 key={index}
                 style={{ width: "22rem", border: "none" }}
-                className="mx-2 mt-4 card_style"
+                className="mx-2 mt-4 card_style "
               >
                 <Card.Img
                   variant="top"
