@@ -44,17 +44,21 @@ const Header = () => {
 
   };
 
-  const total = () => {
-    let price = 0;
-    getdata.map((ele,i) => {
-      price = ele.price * ele.qnty + price;
-    });
-    setPrice(price);
-  };
 
+  
   useEffect(() => {
+    const total = () => {
+      let price = 0;
+      getdata?.map((ele,i) => {
+
+      return  price = ele.price * ele.qnty + price;
+      });
+      setPrice(price);
+    };
+  
     total();
-  }, [total]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -79,7 +83,7 @@ const Header = () => {
             onClick={handleClick}
           >
             <i
-              class="fa-solid fa-cart-shopping text-light"
+              className="fa-solid fa-cart-shopping text-light"
               style={{ fontSize: 25, cursor: "pointer" }}
             ></i>
           </Badge>

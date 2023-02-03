@@ -36,10 +36,11 @@ const Cards = () => {
       <h2 className="text-center">Add to Cart Projects</h2>
 
       <div className="row d-flex justify-content-center align-items-center">
-        {data.map((element, id) => {
+        {data.map((element, index) => {
           return (
             <>
               <Card
+                key={index}
                 style={{ width: "22rem", border: "none" }}
                 className="mx-2 mt-4 card_style"
               >
